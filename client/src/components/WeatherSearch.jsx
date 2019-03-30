@@ -59,7 +59,9 @@ export default class WeatherSearch extends Component {
               </input>
               <small id="emailHelp" class="form-text text-muted">We do not store any of your location information.</small>
             </div>
-            <button type="submit" class="btn btn-primary">Get Weather</button>
+            <div className="button-div">
+              <button type="submit" class="btn btn-primary">Get Weather</button>
+            </div>
           </form>
         }
       </SearchContainer>
