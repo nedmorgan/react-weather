@@ -48,6 +48,7 @@ export default class WeatherSearch extends Component {
             <div class="form-group">
               <label for="exampleInputEmail1">Zip Code</label>
               <input
+                required pattern="[0-9]{5}"
                 type="text"
                 class="form-control form-control-lg"
                 id="exampleInputEmail1"

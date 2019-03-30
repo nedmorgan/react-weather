@@ -15,28 +15,35 @@ export default class CurrentWeather extends Component {
   render() {
     return (
       <WeatherContainer>
+        <h1 className="city-name">{this.props.currentWeather.name}</h1>
         {
           this.state.displayFreedomUnits ?
-            <div>
-              <h1 className="city-name display-4">{this.props.currentWeather.name}</h1>
+            <div className="freedom-units">
               <div className="weather-info-container">
                 <p>Humidity: {`${this.props.currentWeather.main.humidity}%`}</p>
                 <p>Temperature: {`${(this.props.currentWeather.main.temp).toFixed(0)} ℉`}</p>
                 <p>Max Temperature: {`${(this.props.currentWeather.main.temp_max).toFixed(0)} ℉`}</p>
+                <p>Wind Speed: {`${(this.props.currentWeather.wind.speed).toFixed(0)} MPH`}</p>
+                <p>Pressure: {`${(this.props.currentWeather.main.pressure).toFixed(0)} MB`}</p>
                 <p>Description: {`${this.props.currentWeather.weather[0].description.charAt(0).toUpperCase() + this.props.currentWeather.weather[0].description.slice(1)}`}</p>
               </div>
-              <button onClick={this.changeToFreedomUnits} className="btn btn-primary">Change to Celcius</button>
+              <div className="button-div">
+                <button onClick={this.changeToFreedomUnits} className="btn btn-primary">Change to Celcius</button>
+              </div>
             </div>
             :
-            <div>
-              <h1 className="city-name display-4">{this.props.currentWeather.name}</h1>
+            <div className="metric">
               <div className="weather-info-container">
                 <p>Humidity: {`${this.props.currentWeather.main.humidity}%`}</p>
                 <p>Temperature: {`${((this.props.currentWeather.main.temp - 32) / 1.8).toFixed(0)} ℃`}</p>
                 <p>Max Temperature: {`${((this.props.currentWeather.main.temp_max - 32) / 1.8).toFixed(0)} ℃`}</p>
+                <p>Wind Speed: {`${(this.props.currentWeather.wind.speed * 1.609344).toFixed(0)} KPH`}</p>
+                <p>Pressure: {`${(this.props.currentWeather.main.pressure).toFixed(0)} MB`}</p>
                 <p>Description: {`${this.props.currentWeather.weather[0].description.charAt(0).toUpperCase() + this.props.currentWeather.weather[0].description.slice(1)}`}</p>
               </div>
-              <button onClick={this.changeToFreedomUnits} className="btn btn-primary">Change to Freedom Units</button>
+              <div className="button-div">
+                <button onClick={this.changeToFreedomUnits} className="btn btn-primary">Change to Freedom Units</button>
+              </div>
             </div>
         }
 

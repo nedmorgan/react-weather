@@ -1,27 +1,43 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
+
+export const fade = keyframes`${fadeIn}`
 
 export const WeatherContainer = styled.div`
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
-.weather-info-container {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-
-  h1 {
-    color: whitesmoke;
+  .weather-info-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
   }
 
-  .city-name, p {
+  .metric {
+    animation: 1s ${fade};
+  }
+
+  .freedom-units {
+    animation: 1s ${fade};
+  }
+
+  h1 {
+    color: whitesmoke !important;
+  }
+
+  h1, p {
     color: whitesmoke;
     font-family: 'Lato', sans-serif;
   }
 
-  .city-name {
-    font-size: 4vw;
+  h1 {
+    font-size: 5vw !important;
+  }
+
+  .button-div {
+    display: flex;
+    justify-content: center;
   }
 
   p {
