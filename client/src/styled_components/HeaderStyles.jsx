@@ -9,13 +9,19 @@ export const HeaderContainer = styled.div`
   margin: 0;
   border-bottom: 1px solid black;
 
-  a {
+  .header {
     color: black;
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 4vw;
+    font-family: 'Satisfy', cursive;
+    font-size: 3em;
   }
 
   a:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+  .header {
+    font-size: 1.25em;
+  }
+}
 `

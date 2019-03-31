@@ -4,7 +4,7 @@ export const SearchContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-height: 50vw;
+height: 35vw;
 justify-content: center;
 
 label {
@@ -19,5 +19,13 @@ label {
 
 button {
   font-size: 3vw !important;
+}
+
+@media (max-width: 768px) {
+  height: 50vw;
+}
+
+.form-container {
+  width: 75%;
 }
 `

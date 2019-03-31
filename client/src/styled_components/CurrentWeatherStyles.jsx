@@ -7,6 +7,7 @@ export const WeatherContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 7vw;
 
   .weather-info-container {
     display: flex;
@@ -23,7 +24,9 @@ export const WeatherContainer = styled.div`
   }
 
   h1 {
-    color: whitesmoke !important;
+    color: whitesmoke;
+    margin: 0;
+    margin-bottom: 1.5vw;
   }
 
   h1, p {
@@ -32,7 +35,7 @@ export const WeatherContainer = styled.div`
   }
 
   h1 {
-    font-size: 5vw !important;
+    font-size: 5vw;
   }
 
   .button-div {
@@ -41,7 +44,23 @@ export const WeatherContainer = styled.div`
   }
 
   p {
-    font-size: 3vw;
+    font-size: 2em;
   }
+
+  @media (max-width: 768px) {
+  .metric,
+  .freedom-units {
+    height: 65vw;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+
+  margin-top: 10em;
 }
 `

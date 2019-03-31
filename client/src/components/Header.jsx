@@ -5,7 +5,7 @@ export default class Header extends Component {
   render() {
     return (
       <HeaderContainer>
-        <h1><a href="/">Rain or Shine?</a></h1>
+        <h1><a className="header" href="/">myWe@ther</a></h1>
       </HeaderContainer>
     )
   }

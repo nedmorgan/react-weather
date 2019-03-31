@@ -54,7 +54,7 @@ export default class WeatherSearch extends Component {
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 name="currentZip"
-                placeholder="Please enter a 5-digit zip code"
+                placeholder="Please enter a 5-digit zip code (U.S. Only)"
                 onChange={this.handleChange}
                 value={this.state.currentZip.currentZip}>
               </input>
