@@ -20,8 +20,8 @@ export const HeaderContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-  .header {
-    font-size: 1.25em;
-  }
+    .header {
+      font-size: 1.25em;
+    }
 }
 `
