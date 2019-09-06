@@ -18,7 +18,7 @@ label {
 }
 
 button {
-  font-size: 3vw !important;
+  font-size: 2em !important;
 }
 
 @media (max-width: 768px) {

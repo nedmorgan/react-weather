@@ -7,7 +7,6 @@ export const WeatherContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 7vw;
 
   .weather-info-container {
     display: flex;
@@ -29,7 +28,8 @@ export const WeatherContainer = styled.div`
     margin-bottom: 1.5vw;
   }
 
-  h1, p {
+  h1,
+  p {
     color: whitesmoke;
     font-family: 'Lato', sans-serif;
   }
@@ -48,19 +48,19 @@ export const WeatherContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-  .metric,
-  .freedom-units {
-    height: 65vw;
-  }
+    .metric,
+    .freedom-units {
+      height: 65vw;
+    }
 
-  h1 {
-    font-size: 2.5em;
-  }
+    h1 {
+      font-size: 2.5em;
+    }
 
-  p {
-    font-size: 1.25em;
-  }
+    p {
+      font-size: 1.25em;
+    }
 
-  margin-top: 10em;
-}
+    margin-top: 10em;
+  }
 `
